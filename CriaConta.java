@@ -1,15 +1,13 @@
 public class CriaConta {
     public static void main(String[] args) {
-        ContaCliente primeiraConta = new ContaCliente();
-        primeiraConta.nome = "Thiago Boneth";
-        primeiraConta.cpf = "531.082.561-20";
-        primeiraConta.profissao = "Programador";
+        Conta contaDoThiago = new Conta();
 
-        Conta contaThiago = new Conta();
-        contaThiago.depositar(100);
+        contaDoThiago.titular =new ContaCliente();
+        System.out.println(contaDoThiago.mostraSaldo());
 
-        contaThiago.titular = primeiraConta;
-        System.out.println(contaThiago.titular.nome);
-
+        contaDoThiago.titular.nome = "Thiago";
+        System.out.println(contaDoThiago.titular.nome);
+        contaDoThiago.depositar(50);
+        System.out.println(contaDoThiago.mostraSaldo());
     }
 }
