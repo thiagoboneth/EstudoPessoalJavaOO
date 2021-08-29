@@ -1,23 +1,13 @@
 public class CriaConta {
     public static void main(String[] args) {
+
 //instanciamento de contas
-        Conta contaDoThiago = new Conta();
-        Conta contaDaCamila = new Conta();
 
+        Conta contaDoThiago = new Conta(2460,627898);
+        Conta contaDaCamila = new Conta(5920,678765);
 
-        contaDoThiago.setTitular(new ContaCliente());
-        contaDoThiago.getTitular().setNome("Thiago");
-        contaDoThiago.getTitular().setCpf("542.099.234-23");
-        contaDoThiago.getTitular().setProfissao("Programador");
-        contaDoThiago.setAgencia(2350);
-        contaDoThiago.setNumero(456789);
-
-        contaDaCamila.setTitular(new ContaCliente());
-        contaDaCamila.getTitular().setNome("Camila");
-        contaDaCamila.getTitular().setCpf("726.098.872-30");
-        contaDaCamila.getTitular().setProfissao("Professora");
-        contaDaCamila.setAgencia(2560);
-        contaDaCamila.setNumero(782987);
+        contaDoThiago.setTitular(new ContaCliente("Thiago","542.099.234-23","Programador"));
+        contaDaCamila.setTitular(new ContaCliente("Camila","726.098.872-30","Professora"));
 
 //movimentos das contas
 
@@ -29,5 +19,6 @@ public class CriaConta {
 
         contaDaCamila.sacar(300);
 
+        System.out.println("O banco tem o total de " + Conta.getTotalContasCriadas() + " contas criadas com sucesso!");
     }
 }

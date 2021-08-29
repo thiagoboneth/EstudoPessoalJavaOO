@@ -3,6 +3,12 @@ public class ContaCliente {
     private String cpf;
     private String profissao;
 
+    public ContaCliente(String nome, String cpf, String profissao) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.profissao = profissao;
+    }
+
     public String getNome() {
         return nome;
     }
